@@ -42,6 +42,57 @@
 			background-color:#4D0000;
 			opacity:0.3;
 			display:none;
+			z-index:2;
+		}
+		#login{
+			position:absolute;
+			width:400px;
+			height:200px;
+			top:50%;
+			left:50%;
+			margin:-100px 0 0 -200px;
+			background-color:white;
+			display:none;
+			z-index:3;
+			border-radius:8px;
+			box-shadow:10px 10px 5px #000093;
+			padding:5px;
+		}
+		.cancelSpan{
+			float:right;
+			width:10px;
+			height:10px;
+			border-radius:5px;
+			
+		}
+		.cancelSpan:hover{
+			cursor:pointer;
+		}
+		.loginInput{
+			display:block;
+			margin-top:25px;
+			font-size:20px;
+		}
+		.loginInput label{
+			width:30%;
+			display:inline-block;
+		}
+		.loginInput input{
+			border:none;
+			outline:none;
+			border-bottom:1px solid red;
+			width:65%;
+		}
+		.submitSpan{
+			display:block;
+			width:90%;
+			height:30px;
+			text-align:center;
+			background:#2894FF;
+			font-size:20px;
+			margin:auto;
+			margin-top:35px;
+			border-radius:5px;
 		}
 	</style>
 </head>
@@ -58,15 +109,41 @@
 	</div>
 	
 	<div id="shadowDiv">
-	
 	</div>
-	
+	<form action="<%=request.getContextPath() %>/login" method="post">
+		<div id="login">
+			<span class="cancelSpan" onclick="cancel()">x</span>
+			<span class="loginInput" style="margin-top:40px;">
+				<label>用户名：</label>
+				<input type="text" name="username" />
+			</span>
+			<span class="loginInput">
+				<label>密码：</label>
+				<input type="password" name="pw" />
+			</span>
+			<span class="submitSpan">
+				<a href="javascript:loginSubmit()" style="text-decoration:none">登&nbsp;&nbsp;&nbsp;录</a>
+			</span>
+		</div>
+	</form>
 </body>
 <script>
 function login(){
 	document.getElementById("shadowDiv").style.display = "block";
+	document.getElementById("login").style.display = "block";
+}
+function cancel(){
+	document.getElementById("shadowDiv").style.display = "none";
+	document.getElementById("login").style.display = "none";
+	
 }
 
+function loginSubmit(){
+	//valid
+	
+	//form submit
+	document.forms[0].submit();
+}
 </script>
 
 
