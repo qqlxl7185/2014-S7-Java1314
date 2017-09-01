@@ -95,6 +95,9 @@
 			border-radius:5px;
 		}
 	</style>
+	<%
+		String username = (String)request.getSession().getAttribute("username");
+	%>
 </head>
 <body>
 	<div class="head">
@@ -104,7 +107,11 @@
 			<input type="submit" value="查询" />
 		</span>
 		<span class="userInfo">
-			<a href="javascript:login()">登录</a>&nbsp;|&nbsp;<a href="">注册</a>
+			<%if(username == null || "".equals(username)) {%>
+				<a href="javascript:login()">登录</a>&nbsp;|&nbsp;<a href="">注册</a>
+			<%}else{ %>
+				<a href=""><%=username %></a>&nbsp;|&nbsp;<a href="<%=request.getContextPath() %>/logout">登出</a>
+			<%} %>
 		</span>
 	</div>
 	
