@@ -5,6 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.demo.org.bean.BeanClass01;
 import com.demo.org.bean.BeanClass02;
+import com.demo.org.bean.BeanClass03;
 
 /**
  * Hello world!
@@ -32,7 +33,10 @@ public class App
         bcf01.setMsg("This is bcf01");
         bcf01.showMsg();*/
         
-        BeanClass02 bc02 = ac.getBean("bc02",BeanClass02.class);
-        bc02.showInfo();
+        /*BeanClass02 bc02 = ac.getBean("bc02",BeanClass02.class);
+        bc02.showInfo();*/
+        
+        BeanClass03 bc03 = ac.getBean("bc03",BeanClass03.class);
+        bc03.show();
     }
 }
