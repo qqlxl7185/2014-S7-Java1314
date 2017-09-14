@@ -13,4 +13,13 @@
 	
 	<bean id="bcf01" factory-bean="bcf" factory-method="getBc01" />
 	
+	
+	<!-- bean配置 -->
+	<bean id="bc02" class="com.demo.org.bean.BeanClass02">
+		<!-- <property name="info" value="this is in the xml configuration" /> -->
+		<constructor-arg name="info" value="this is constructor-arg" />
+	</bean>
+	
+	
+	
 </beans>

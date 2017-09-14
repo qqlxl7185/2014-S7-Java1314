@@ -1,5 +1,10 @@
 package com.demo.org.bean;
 
+/**
+ * spring 注册生产bean的方式
+ * @author xl
+ *
+ */
 public class BeanClass01 {
 	private String msg;
 
