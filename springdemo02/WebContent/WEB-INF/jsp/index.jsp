@@ -9,5 +9,15 @@
 <body>
 <h1 style="text-align:center;color:red">Index</h1>
 <a href="<%=request.getContextPath() %>/index/param?name=tom&batch=java" >传送参数</a>
+
+<hr />
+${name }
+<br />
+${batch }
+
+<hr />
+${student.name }
+<br />
+${student.batch }
 </body>
 </html>
