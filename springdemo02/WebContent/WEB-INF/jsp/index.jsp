@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/h.css" type="text/css" />
 <title>Index</title>
 </head>
 <body>
-<h1 style="text-align:center;color:red">Index</h1>
+<h1>Index</h1>
 <a href="<%=request.getContextPath() %>/index/param?name=tom&batch=java" >传送参数</a>
 
 <hr />
