@@ -12,13 +12,19 @@
 <a href="<%=request.getContextPath() %>/index/param?name=tom&batch=java" >传送参数</a>
 
 <hr />
-${name }
+<%-- ${name }
 <br />
 ${batch }
 
 <hr />
 ${student.name }
 <br />
-${student.batch }
+${student.batch } --%>
+
+<form action="<%=request.getContextPath() %>/index/fu" method="post" enctype="multipart/form-data">
+	<input type="file" name="file" />
+	<input type="submit" value="submit" />
+</form>
+
 </body>
 </html>
