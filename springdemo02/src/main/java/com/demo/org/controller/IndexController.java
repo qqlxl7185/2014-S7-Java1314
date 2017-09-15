@@ -15,6 +15,7 @@ import com.demo.org.bean.Student;
 public class IndexController {
 	@RequestMapping()
 	public String index() {
+		System.out.println("This is in the index");
 		return "index";
 	}
 	
