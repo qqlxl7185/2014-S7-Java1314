@@ -7,7 +7,7 @@
 	</select>
 	
 	<insert id="addAcc">
-		insert into account (username,password) values ('${username}','${password}')
+		insert into account (username,password) values (#{username},#{password})
 	</insert>
 	
 </mapper>
