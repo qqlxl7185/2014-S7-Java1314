@@ -21,7 +21,6 @@
   </environments>
   <mappers>
     <mapper resource="com/demo/org/mapping/account.xml"/>
-    <!-- <mapper resource="org/mybatis/mapping/role.xml"/> -->
-    <!-- <mapper resource="org/mybatis/mapping/log.xml"/> -->
+    <mapper resource="com/demo/org/mapping/role.xml"/>
   </mappers>
 </configuration>
