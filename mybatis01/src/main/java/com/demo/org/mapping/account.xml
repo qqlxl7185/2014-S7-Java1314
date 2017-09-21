@@ -5,4 +5,9 @@
 	<select id="getAll" resultType="com.demo.org.bean.Account">
 		select * from account
 	</select>
+	
+	<insert id="addAcc">
+		insert into account (username,password) values ('${username}','${password}')
+	</insert>
+	
 </mapper>
