@@ -32,6 +32,13 @@ public class App
         for(Account acc : accountList) {
         	System.out.println(acc.getUsername());
         }*/
+        Account account = new Account();
+        account.setUsername("testname");
+        account.setPassword("testpassword");
+        session.insert("test.addAcc",account);
+        
+        session.commit();
+        
         //第二种映射方式，通过接口映射
         /*IRole roleDao = session.getMapper(IRole.class);
         List<Role> roleList = roleDao.getAll();
@@ -39,11 +46,11 @@ public class App
         	System.out.println(role.getRolename());
         }*/
         //第三种映射方式，通过注解
-        session.getConfiguration().addMapper(ILog.class);
+        /*session.getConfiguration().addMapper(ILog.class);
         ILog logDao = session.getMapper(ILog.class);
         List<UserLog> logList = logDao.getAll();
         for(UserLog ul : logList) {
         	System.out.println(ul.getDescription());
-        }
+        }*/
     }
 }
