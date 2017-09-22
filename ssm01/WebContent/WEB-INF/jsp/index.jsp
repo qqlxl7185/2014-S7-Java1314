@@ -8,5 +8,11 @@
 </head>
 <body>
 	<h1 style="text-align:center;color:red">Index</h1>
+	
+	<p>
+		account username : ${acc.username }
+		<br />
+		account password : ${acc.password }
+	</p>
 </body>
 </html>
